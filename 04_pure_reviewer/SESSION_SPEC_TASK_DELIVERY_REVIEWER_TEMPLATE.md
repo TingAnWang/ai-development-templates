@@ -219,8 +219,8 @@ review; remove unused publication metadata and requirements.
 ## 8. Adoption and revision
 
 This specification and its matching output template are reusable documents, not
-completed reviews or assignments to existing sessions. Their source context is
-linked in the [getting-started guide](../README.md#where-these-files-come-from).
+completed reviews or assignments to existing sessions. The [getting-started guide](../README.md#about-this-collection)
+explains the collection and how to adopt these files.
 
 Record the actual assignment when adopting this specification. Keep the role
 limited to reviewing deliveries. Preserve issued specifications and reports;

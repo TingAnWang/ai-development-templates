@@ -1,30 +1,26 @@
 # AI-assisted development: session and review templates
 
 Reusable Markdown templates for giving AI coding sessions clear responsibilities,
-bounded assignments, and evidence-based reviews. These files accompany a Medium
-series about using AI in development. They are intended for developers who want
-to make implementation, handoffs, and review easier to follow across sessions.
+bounded assignments, and evidence-based reviews. This collection is intended as
+supplementary material for a Medium series about using AI in development. It is
+for developers who want to make implementation, handoffs, and review easier to
+follow across sessions.
 
 Start with one small task and one implementation session. Add a separate reviewer
 when an independent check is useful; add a coordinator when several tasks or
 sessions need coordination. The full project workflow shown in the examples is
 an option, not a prerequisite.
 
-## Where these files come from
+## About this collection
 
-The source is [12 · Copy-ready templates and checklists](https://app.notion.com/p/12-Copy-ready-templates-and-checklists-3eb5ef30d44781949a9fef9ccc4fd834),
-part of *AI-Assisted Development & Knowledge Management — A Practical Guide*.
-The Notion page may require access. It contains short task, message, delivery,
-verification, review, and human-decision examples as well as the attachments from
-which this collection was prepared. This folder contains the adapted attachments;
-it is not an export of the entire chapter.
-
-The public-copy edits consolidate the shared session template, standardize editable
-fields, and distinguish reusable instructions from historical project examples.
+This repository contains reusable session specifications, a review-report template,
+a patch note template, and anonymized examples adapted from a development workflow.
+One shared session template supports coordinator/reviewer and implementation roles.
+The getting-started instructions and templates needed to begin are included here.
 
 **Medium articles:** links and article-to-template mappings will be added when
 the series URLs are available. You can use the getting-started steps below
-without access to the articles or Notion page.
+without access to the articles or any private documentation.
 
 ## Start here: which file should I use?
 
@@ -54,7 +50,9 @@ the assignment. A **patch note** records a later correction.
 Session specifications do not replace task assignments. This collection provides
 session, review-report, and patch templates; dedicated task-assignment and delivery
 receipt templates are not included. For a first task, put those details in a clear
-chat message or project document. The Notion source has short examples.
+chat message or project document using the starter message below. Ask for a
+delivery receipt containing the artifact paths, changes, actual checks and results,
+limitations, and next reviewer.
 
 | Role | Main responsibility |
 | --- | --- |
@@ -183,7 +181,7 @@ apply. Prefer starting from the shared template and consulting examples for
 wording.
 
 The reviewer files use `PASS`, `CHANGES_REQUIRED`, and `INCONCLUSIVE`, with the
-rules in the reviewer specification. The broader Notion chapter also illustrates
-other review wording; use the explicit rules of the specification you adopt.
+rules in the reviewer specification. Use the explicit rules of the specification
+you adopt.
 A passing technical review records its stated scope; the human owner still
 decides acceptance and the next action.
