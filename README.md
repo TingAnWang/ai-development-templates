@@ -1,4 +1,4 @@
-# AI-assisted development: session and review templates
+# AI-assisted development: session, task, and review templates
 
 Reusable Markdown templates for giving AI coding sessions clear responsibilities,
 bounded assignments, and evidence-based reviews. This collection is intended as
@@ -13,19 +13,23 @@ an option, not a prerequisite.
 
 ## About this collection
 
-This repository contains reusable session specifications, a review-report template,
-a patch note template, and anonymized examples adapted from a development workflow.
-One shared session template supports coordinator/reviewer and implementation roles.
-The getting-started instructions and templates needed to begin are included here.
+This repository contains reusable session specifications, task and delivery
+forms, coordination and acceptance templates, review and patch templates, and
+worked examples adapted from a development workflow. One shared session template
+supports coordinator/reviewer and implementation roles.
 
-**Medium articles:** links and article-to-template mappings will be added when
-the series URLs are available. You can use the getting-started steps below
+**New practical series:** the [article companion](series/practical_ai_workflows.md)
+maps each article title to its templates and filled examples. The new series'
+Medium URLs will be added when available. All getting-started material works
 without access to the articles or any private documentation.
+
+For a small change, begin with the starter message below and a concise receipt.
+The additional documents are optional tools for work that needs more detail.
 
 ## Start here: which file should I use?
 
-Read this table in order. The numbered folders group the source material; they
-do not prescribe the order of work.
+Choose the row that matches your task. The numbered folders group the source
+material; they do not prescribe the order of work.
 
 | What you want to do | Start with | Optional reference |
 | --- | --- | --- |
@@ -34,6 +38,12 @@ do not prescribe the order of work.
 | Review a delivered task without repairing it | [Reviewer session template](04_pure_reviewer/SESSION_SPEC_TASK_DELIVERY_REVIEWER_TEMPLATE.md) | [Historical reviewer specification](04_pure_reviewer/SESSION_SPEC_TASK_DELIVERY_REVIEWER.md) |
 | Write the result of a delivery review | [Review report template](04_pure_reviewer/TASK_DELIVERY_REVIEW_TEMPLATE.md) | The reviewer template defines the verdict rules |
 | Document a correction to an earlier delivery | [Patch note template](01_patch/codex-patch-note-template-v1.md) | Use after there is a delivery to correct |
+| Assign one concrete outcome | [Task assignment](05_task_delivery/TASK_ASSIGNMENT_TEMPLATE.md) | [Filled viewer task](examples/implementer_completion/TASK.md) |
+| Return results against the task | [Delivery receipt](05_task_delivery/DELIVERY_RECEIPT_TEMPLATE.md) | [Filled viewer receipt](examples/implementer_completion/RECEIPT.md) |
+| Control preparation and a fixed real attempt | [Optional execution controls](05_task_delivery/EXECUTION_CONTROLS_TEMPLATE.md) | [Diagnostic example](examples/implementer_completion/README.md#different-controls-for-a-fixed-diagnostic) |
+| Transfer work with explicit ownership and activation | [Handoff](06_coordination/HANDOFF_TEMPLATE.md) | [Filled coordinator handoff](examples/coordination_and_publication/HANDOFF.md) |
+| Preserve claims, qualifications, and destination states | [Claim/evidence map](06_coordination/CLAIM_EVIDENCE_TEMPLATE.md) | [Filled claim map](examples/coordination_and_publication/CLAIM_MAP.md) |
+| Connect a contract to evidence | [Requirement/test matrix](07_acceptance/REQUIREMENT_TEST_MATRIX_TEMPLATE.md) | [Annotation test plan](examples/annotation_history/TEST_PLAN.md) |
 
 The shared session template replaces the two identical `SESSION_SPEC_TEMPLATE.md`
 files previously kept in the coordinator and implementation folders. Both roles
@@ -47,18 +57,20 @@ acceptance checks, and stopping point. A **delivery receipt** records what was
 actually delivered and checked. A **review report** assesses that delivery against
 the assignment. A **patch note** records a later correction.
 
-Session specifications do not replace task assignments. This collection provides
-session, review-report, and patch templates; dedicated task-assignment and delivery
-receipt templates are not included. For a first task, put those details in a clear
-chat message or project document using the starter message below. Ask for a
-delivery receipt containing the artifact paths, changes, actual checks and results,
-limitations, and next reviewer.
+Session specifications do not replace task assignments. Use the starter message
+below for a small task, or the [task assignment](05_task_delivery/TASK_ASSIGNMENT_TEMPLATE.md)
+when scope and acceptance need more detail. The matching
+[delivery receipt](05_task_delivery/DELIVERY_RECEIPT_TEMPLATE.md) records artifact
+paths, the tested version, changes, actual checks and results, limitations, and
+next owner. A receipt reports what happened; it does not substitute for review
+or human acceptance.
 
 | Role | Main responsibility |
 | --- | --- |
 | Human owner | Chooses the goal and scope, resolves material decisions, and decides acceptance and subsequent work. |
 | Coordinator/reviewer | Turns goals into bounded assignments and checks integration and technical claims. |
 | Implementer | Makes the assigned change and delivers artifacts, checks, and limitations. |
+| Knowledge author | Produces a source-backed summary, retaining qualifications and distinguishing reported results from new claims. |
 | Task-delivery reviewer | Inspects a submitted delivery and reports findings without taking over implementation. |
 
 Codex, Fable, and Opus are names used in the source examples for tools or sessions
@@ -83,6 +95,7 @@ involvement rather than describe the review as independent.
    project files, identify their paths explicitly. Otherwise, paste the completed
    specification followed by the assignment. Replace every editable field in the
    starter message below before sending it.
+   Alternatively, fill the task-assignment template and identify its exact path.
 5. **Inspect the delivery.** Ask for usable artifact paths, changes made, checks
    actually performed and their results, unchecked areas, and unresolved issues.
    Verify the behavior that matters before deciding acceptance.
@@ -160,6 +173,13 @@ The reviewer template's `output_template` initially names the report template
 from this collection's root. When adopting it, update that field and its Markdown
 link to wherever you put the report template. Do the same for all moved files.
 
+The new compact task, handoff, receipt, claim-map, and acceptance templates use
+Markdown identity fields and do not require YAML. If your adopted session or
+project convention requires front matter, add the required fields consistently;
+identify the actual author as `source_session`, separately from the recipient.
+The filled examples are teaching adaptations, not active assignments or reusable
+historical result values.
+
 Metadata paths are relative to the declared `project_root` unless marked absolute;
 ordinary Markdown links resolve relative to the document containing the link.
 Template instructions describe potential destinations in your own project, not
@@ -168,8 +188,9 @@ of reference from their intended locations.
 
 ## Read the examples as historical context
 
-The three example specifications are anonymized adaptations of source project
-records. Their dates, session names, statuses, and publication fields describe
+The three earlier example specifications in folders `02` through `04` are
+anonymized adaptations of source project records. Their dates, session names,
+statuses, and publication fields describe
 the source examples as recorded. They do not establish the current state of
 this repository or of a project that adopts them.
 
@@ -185,3 +206,18 @@ rules in the reviewer specification. Use the explicit rules of the specification
 you adopt.
 A passing technical review records its stated scope; the human owner still
 decides acceptance and the next action.
+
+
+## What changed for the practical series
+
+The [October 17 public baseline](https://github.com/TingAnWang/ai-development-templates/tree/52a4c5dab91d7220cb3afc5dfd18b8bd0b5cf51d)
+already established role/task separation, evidence-based review, and distinct
+destination states. The new material shows how actual assignments made those
+principles concrete: permission for related repairs, different rules for fixed
+experiments, phase activation, claim qualifications, and history-dependent tests.
+
+Existing template and historical-example paths are retained. The new
+[series guide](series/practical_ai_workflows.md) distinguishes reported outcomes
+from adapted instructions and proposed checks. Its examples can be read without
+private source access, but the original raw evidence is not distributed here.
+See [CHANGELOG.md](CHANGELOG.md) for the scope of this update.
